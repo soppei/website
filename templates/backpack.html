@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='backpack.css') }}" />
+<h2> Classes Backpacked: </h2>
+<table id = "classes" style="width:90%">
+	<tr>
+		<th width = 10% > Class Name </th>
+		<th width = 10% > Section Number </th>
+		<th width = 20% > Meeting Time </th>
+		<th width = 20% > Instructor </th>
+		<th width = 10% > Remove? </th>
+	</tr>
+	{% for class in backpack %}
+	<tr > 
+		<td width = 10% > {{class['subject_code']}} {{class['catalog_num']}} </td>
+		<td width = 10% > {{ class['section_num'] }} </td>
+		<td width = 20% > {{ class['meeting_day']}} {{class['meeting_time']}} </td>
+		<td width = 20% > {{ class['instructor']}} </td>
+		<td width = 5% > <form method = "post" action="/backpack">
+			<input type="hidden" name = "section_num" value="{{ class['section_num'] }}"/> 
+			<input type="hidden" name = "subject_code" value="{{class['subject_code']}}"/> 
+			<input type="hidden" name = "catalog_num" value="{{class['catalog_num']}}"/> 
+			<input type="hidden" name = "meeting_day" value="{{class['meeting_day']}}"/>
+			<input type="hidden" name = "meeting_time" value="{{class['meeting_time']}}"/>
+			<input type="hidden" name = "instructor" value="{{class['instructor']}}"/>
+			<input type="hidden" name = "type" value ="remove" />
+			<input type="submit" class="btn btn-info" value="remove"/></form></td>
+	</tr>
+{% endfor %}
+</table>
+<div id="button">
+	<a href="{{backtosection}}"><button type="button" class="btn btn-info">Back to Sections </button></a>
+	<a href="/"><button type="button" class="btn btn-info"> HOME </button></a>
+</div>
+{% endblock %}

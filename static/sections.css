@@ -1,0 +1,86 @@
+#header{
+	background: url(http://cdn29.elitedaily.com/wp-content/uploads/2013/07/university-of-michigan--800x400.jpeg) no-repeat center;
+
+	height:180px;
+    background-size: cover;
+}
+h1{
+	color:#FFFFFF;
+	font-size: 30px;
+	text-shadow: 2px 2px 2px #000000;
+	margin-top: 100px;
+	background-color: #6495ED;
+	padding-left: 5%;
+	width:40%;
+	border-radius:5px;
+	text-align: left;
+}
+h3{
+	text-align: left;
+	font-size: 25px;
+	margin-top:0px;
+}
+table{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+table tr:nth-child(odd) {
+	background-color: #B8DBFF;
+}
+table tr:hover td{
+	background-color:whitesmoke;
+	font-weight: bold;
+}
+#classes th:first-child {
+    border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+}
+#classes th:last-child {
+    border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+}
+#classes tr:last-child td:first-child {
+    border-radius: 0 0 0 5px ;
+    -moz-border-radius:0 0 0 5px;
+    -webkit-border-radius:0 0 0 5px;
+}
+#classes tr:last-child td:last-child {
+    border-radius: 0 0 5px 0 ;
+    -moz-border-radius: 0 0 5px 0;
+    -webkit-border-radius:0 0 5px 0;
+}
+#classes th{
+	text-align:center;
+	background-color:#6495ED;
+	padding: 5px;
+	color:#FFFFFF;
+
+}
+#classes td{
+
+	padding:5px;
+	text-align:center;
+
+}
+#button{ 
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	color:#FFFFFF;
+	padding-top:2%;
+}
+#button a{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.btn-info{
+	border-color:#6495ED;
+	background-color:#6495ED;
+}
+.btn-info:hover{
+	border-color:#B8DBFF;
+	background-color:#B8DBFF;
+}

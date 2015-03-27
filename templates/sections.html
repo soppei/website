@@ -1,0 +1,48 @@
+{% extends "catalognbrs.html" %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='sections.css') }}" />
+<div id = "header">
+<br><h1>  {{SubjectCode}}{{CatalogNumber}} </h1>
+</div>
+<div id="button">
+	<a href="{{backtoclass}}"><button type="button" class="btn btn-info">Back to Classes </button></a>
+	<a href="/"><button type="button" class="btn btn-info"> HOME </button></a>
+</div>
+<h3> Choose from Sections below: </h3>
+
+<table id = "classes" style="width:90%">
+	<tr>
+		<th width = "8%"> Section Number </th>
+		<th width = "8%"> Section Type </th>
+		<th width = "15%"> Meeting Days </th>
+		<th width = "20%"> Meeting Times </th>
+		<th width = "5%"> Credit Hours </th>
+		<th width = "20%"> Instructors </th>
+		<th width = "5%"> Backpack? </th>
+	</tr>
+	{% for section in sections %}
+	<tr> 
+
+		<td width = "8%">{{section['SectionNumber']}} </td>
+		<td width = "8%">{{section['SectionType']}}</td>
+		<td width = "15%">{{section.Meeting['Days']}} </td>
+		<td width = "20%">{{section.Meeting['Times']}} </td>
+		<td width = "5%">{{section['CreditHours']}} </td>
+		<td width = "20%">{{section.Meeting['Instructors']}}</td>
+		<td width = "5%"><form method = "post" action="/backpack">
+			<input type="hidden" name = "section_num" value="{{section['SectionNumber']}}"/> 
+			<input type="hidden" name = "subject_code" value="{{SubjectCode}}"/> 
+			<input type="hidden" name = "catalog_num" value="{{CatalogNumber}}"/> 
+			<input type="hidden" name = "meeting_day" value="{{section.Meeting['Days']}}"/>
+			<input type="hidden" name = "meeting_time" value="{{section.Meeting['Times']}}"/>
+			<input type="hidden" name = "instructor" value="{{section.Meeting['Instructors']}}"/>
+			<input type="hidden" name = "type" value= "add"/>
+			<input type="submit" id="button" class="btn btn-info" value="backpack"/></form></td>
+			</tr>
+	{% endfor %}
+</table>
+
+
+{% endblock %}
+

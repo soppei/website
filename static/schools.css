@@ -1,0 +1,93 @@
+#header{
+    background: url(http://www-personal.umich.edu/~jensenl/visuals/album/2011/fall/IMG_1715.jpg) no-repeat center; 
+    height:180px;
+    background-size: cover;
+}
+h1{
+	color:#FFFFFF;
+	font-size: 30px;
+	text-shadow: 2px 2px 2px #000000;
+	margin-top: 100px;
+	background-color: #FF6600;
+	padding-left: 5%;
+	width:40%;
+	border-radius:5px;
+	text-align: left;
+}
+h3{
+	text-shadow: 1px 1px 1px #000000;
+	color:#FFFFFF;
+	padding-bottom: 20px;
+	text-align: left;
+	margin-top: 0px;
+}
+body{
+	background-color: #FF944D;
+	text-align: center;
+}
+a{
+	color:maroon;
+}
+#menu a:visited{
+	color:gray;
+}
+ul{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right:20px;
+}
+#menu{
+
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#menu li{
+
+	list-style-type:none;
+	width:20em;
+	text-align:center;
+
+}
+#menu a{
+	text-decoration:none;
+	display:block;
+	background-color:#FFFFFF;
+	box-shadow:5px 5px 5px silver;
+	border-radius:3.5px;
+	height:1.5em;
+	font-size:12pt;
+}
+#menu a:hover{
+	background-color:#FFFFCC;
+	box-shadow:3px 3px 3px whitesmoke;
+	border:none;
+}
+#button{ 
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	color:#FFFFFF;
+	float:top;
+	padding-top:2%;
+}
+#button a{
+	text-decoration: none;
+	color:#FFFFFF;
+}
+.btn-info{
+	border-color:#FF6600;
+	background-color:#FF6600;
+}
+#button .btn-info:hover{
+	border-color:#FFFFCC;
+	background-color:#FFFFCC;
+}
+p{
+	position: relative;
+	bottom:0;
+	left:0;
+	font-size: 7pt;
+	text-align: left;
+	color:#FFFFFF;
+}

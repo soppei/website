@@ -1,0 +1,23 @@
+{% extends "schools.html" %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='subjects.css') }}" />
+<div id="header">
+<br><h1> Subjects </h1>
+</div>
+<body>
+	<div id="button">
+	<a href="{{backtoschool}}"><button type="button" class="btn btn-info">Back to Schools </button></a>
+	<a href="/"> <button type="button" class="btn btn-info">HOME </button></a>
+</div>
+<h3> Choose from subjects below: </h3>
+<div id = "menu">
+{% for subject in subjects %}
+<ul>
+<li><a href = "/{{TermCode}}/{{SchoolCode}}/{{subject['SubjectCode']}}"> {{ subject['SubjectDescr'] }} </a><br></li>
+</ul>
+{% endfor %}
+</div>
+</body>
+<p> Lars, Jensen. <em>randomSPACE</em> Fall 2012 - Summer 2013. 10 Dec. 2014 </p>
+{% endblock %}

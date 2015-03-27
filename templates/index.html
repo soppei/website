@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+<body>
+	<div class="text-vertical-center">
+	<h1 > <strong>Welcome to wEECS </strong></h1>
+	<em><h2>Glowing hearting-warming happy time...</h2></em>
+	<br>
+</div>
+
+<div id = "menu">
+{% for term in terms %}
+<ul>
+<li><a href = "/{{term['TermCode']}}"> {{ term['TermDescr'] }} </a><br></li>
+</ul>
+{% endfor %}
+</div>
+
+<div id = "button">
+<a href = "/backpack"><button type="button" class="btn btn-info"> My Backpack </button></a>
+</div>
+</body>
+<p> Lars, Jensen. Tulips and the clock tower. <em>randomSPACE</em> April - May, 2009. 10 Dec. 2014 </p>
+{% endblock %}

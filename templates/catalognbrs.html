@@ -1,0 +1,23 @@
+{% extends "subjects.html" %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='catalognbrs.css') }}" />
+<div id="header">
+<br><h1> Classes </h1>
+</div>
+<body>
+	<div id="button">
+	<a href="{{backtosubject}}"><button type="button" class="btn btn-info">Back to Subjects </button></a>
+	<a href="/"><button type="button" class="btn btn-info"> HOME </button></a>
+</div>
+<h3> Choose from Catalogs below: </h3>
+<div id = "menu">
+{% for catalognbr in catalognbrs %}
+<ul>
+<li><a href = "/{{TermCode}}/{{SchoolCode}}/{{SubjectCode}}/{{catalognbr['CatalogNumber']}}"> {{SubjectCode}}{{catalognbr['CatalogNumber']}} {{ catalognbr['CourseDescr'] }} </a><br></li>
+</ul>
+{% endfor %}
+</div>
+</body>
+<p> Lars, Jensen. Law Quad. <em>randomSPACE</em> April - May 2011. 10 Dec. 2014 </p>
+{% endblock %}
